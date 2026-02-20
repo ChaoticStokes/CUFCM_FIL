@@ -187,7 +187,7 @@ class DRIVER:
                         reverse_fil_direction_ratio=0.0
 
                         # # planar triangle
-                        nfil = int(98450)
+                        nfil = int(358)
                         nblob = int(900)
                         nseg = 20
                         ar = round(1, 2)
@@ -197,7 +197,7 @@ class DRIVER:
                         nx=int(128)
                         ny=int(128)
                         nz=int(128)
-                        boxsize=1200
+                        boxsize=3600
                         fil_spacing=20.0
                         blob_spacing=5.0
                         fil_x_dim=1
