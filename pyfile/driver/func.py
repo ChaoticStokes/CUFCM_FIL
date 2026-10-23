@@ -82,7 +82,8 @@ class DRIVER:
 
         self.category = 'pizza_sim/'
         self.exe_name = 'cilia_1e-4_pizza'
-        self.date = '20260205_mcc'
+        #self.date = '20260330_mcc'
+        self.date = '20251005_filled_180_random_phase_12_5m2_5m3'
         self.dir = f"data/{self.category}{self.date}{self.afix}/"
         
 
@@ -167,7 +168,7 @@ class DRIVER:
                 for k in range(self.sweep_shape[2]):
                     for l in range(self.sweep_shape[3]):
 
-                        seg_sep = 2.6
+                        seg_sep = 2.6   #1.7
                         force_mag = 1.0
                         tilt_angle = 0.0
                         pair_dp = 1.0
@@ -187,24 +188,24 @@ class DRIVER:
                         reverse_fil_direction_ratio=0.0
 
                         # # planar triangle
-                        nfil = int(358)
-                        nblob = int(900)
-                        nseg = 20
+                        nfil = int(256)
+                        nblob = int(4225)
+                        nseg = 20 #30
                         ar = round(1, 2)
                         period = 1
-                        spring_factor = round(0.05, 3)
-                        #spring_factor = int(self.date[-3]) * (10 ** (-int(self.date[-1])))
+                        #spring_factor = round(0.05, 3)
+                        spring_factor = int(self.date[-3]) * (10 ** (-int(self.date[-1])))
                         nx=int(128)
                         ny=int(128)
                         nz=int(128)
-                        boxsize=3600
-                        fil_spacing=20.0
-                        blob_spacing=5.0
+                        boxsize=1200
+                        fil_spacing=100.0
+                        blob_spacing=25.0
                         fil_x_dim=1
                         blob_x_dim=10
                         hex_num=2
                         reverse_fil_direction_ratio=0.0
-                        sim_length = 1
+                        sim_length = 400
                         force_noise_mag = 0.0
                         omega_spread = 0.0
                         pair_dp = 1.0

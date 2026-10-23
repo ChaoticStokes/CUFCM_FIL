@@ -138,11 +138,11 @@ extern std::string CUFCM_CONFIG_FILE_NAME;
 
   #endif
 
-  #define DYNAMIC_PHASE_EVOLUTION false
+  #define DYNAMIC_PHASE_EVOLUTION true
   // If true, cilia phase speeds are solved for as part of the dynamics. Note that this requires having run a reference simulation with WRITE_GENERALISED_FORCES=true previously.
   // If false, phase_dot = omega0 is constant for each cilium.
 
-  #define DYNAMIC_SHAPE_ROTATION false
+  #define DYNAMIC_SHAPE_ROTATION true
   // If true, the vertical in the cilia reference configuration can rotate with respect to the surface normal.
   // Essentially, the cilia can 'tip backwards or forwards' in their beat planes.
   // If false, no such rotation ever occurs.
@@ -202,7 +202,7 @@ extern std::string CUFCM_CONFIG_FILE_NAME;
 
 #elif BODY_OR_SURFACE_TYPE==2 or BODY_OR_SURFACE_TYPE==4 or BODY_OR_SURFACE_TYPE==5
 
-  #define SEEDING_TYPE 14
+  #define SEEDING_TYPE 10
   // Valid options:
   // 0 = Filaments are evenly distributed over the surface.
   // 1 = Filaments are seeded in an equatorial band.
@@ -219,6 +219,7 @@ extern std::string CUFCM_CONFIG_FILE_NAME;
   //12 = Defective seeding. A square formation with a defective patch in the center.
   //13 = Single cilium seeding.
   //14 = Full MCC seeding with multiple patches of cilia, each patch prescribed with a MCW.
+  //15 = Seeding of a column of cilia
 
   #if BODY_OR_SURFACE_TYPE==5
     #define FOURIER_DIR "input/rigidwall_seeding/"
@@ -543,6 +544,7 @@ extern Real REV_RATIO;
   #define DEFECTIVE_SEEDING (SEEDING_TYPE==12)
   #define SINGLE_SEEDING (SEEDING_TYPE==13)
   #define FULL_MCC_SEEDING (SEEDING_TYPE==14)
+  #define COLUMN_SEEDING (SEEDING_TYPE==15)
 
 #endif
 

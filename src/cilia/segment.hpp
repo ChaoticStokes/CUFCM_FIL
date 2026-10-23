@@ -12,8 +12,8 @@ class matrix;
 // =============================================================================
 // Included dependencies
 #include "../general/quaternion.hpp"
-#include <thrust/host_vector.h>
-#include <thrust/device_vector.h>
+//#include <thrust/host_vector.h>
+//#include <thrust/device_vector.h>
 
 
 class segment{

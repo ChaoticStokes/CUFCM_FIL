@@ -1,0 +1,15 @@
+rm cilia
+rm: cannot remove 'cilia': No such file or directory
+make: [makefile:36: cilia_clean] Error 1 (ignored)
+rm cilia.exe
+rm: cannot remove 'cilia.exe': No such file or directory
+make: [makefile:37: cilia_clean] Error 1 (ignored)
+rm cilia.exp
+rm: cannot remove 'cilia.exp': No such file or directory
+make: [makefile:38: cilia_clean] Error 1 (ignored)
+rm cilia.lib
+rm: cannot remove 'cilia.lib': No such file or directory
+make: [makefile:39: cilia_clean] Error 1 (ignored)
+rm cilia.pdb
+rm: cannot remove 'cilia.pdb': No such file or directory
+make: [makefile:40: cilia_clean] Error 1 (ignored)
